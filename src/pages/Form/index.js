@@ -55,7 +55,7 @@ export default function Form({ history }) {
         Authorization: "Basic " + auth
       }
     }
-    if (history) {
+    if (locationState) {
       try {
         params.id = id;
         params.createdAt = createdAt;
@@ -120,7 +120,7 @@ export default function Form({ history }) {
             required={true}
             onChange={e => setTaxpayerId(e.target.value)}
           />
-          <button className="btn-form " type="submit">{history ? 'Update' : 'Register'}</button>
+          <button className="btn-form " type="submit">{locationState ? 'Update' : 'Register'}</button>
         </form>
       </div>
     </>

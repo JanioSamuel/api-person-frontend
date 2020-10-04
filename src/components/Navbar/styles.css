@@ -34,3 +34,9 @@
 .menu-links label:hover {
   color: #0099cc;
 }
+
+@media(max-width: 650px) {
+  .menu-links label {
+    font-size: 12px;
+  }
+}

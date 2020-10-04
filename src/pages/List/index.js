@@ -4,7 +4,6 @@ import api from '../../services/api';
 import editImage from '../../assets/edit.png';
 
 import './styles.css';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 
 export default function List({ history }) {
@@ -39,11 +38,9 @@ export default function List({ history }) {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <Link to="/form">
-          <button className="btn-new">New</button>
-        </Link>
-        <table>
+      <div className="list-container">
+        <label className="people-list-label">People List</label>
+        <table hidden={people.length === 0}>
           <thead></thead>
           <tbody>
             <tr>

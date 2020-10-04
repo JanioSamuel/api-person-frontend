@@ -51,11 +51,26 @@
   cursor: pointer;
   margin-top: 50px;
   position: absolute;
-  bottom: 60px;
+  bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
 }
 
+@media(max-width: 1300px) {
+  .btn-form {
+    bottom: 100px;
+  }
+}
+
+@media(max-width: 650px) {
+  .form-register {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .btn-form {
+    position: relative;
+    bottom: 40px;
+  }
+}
 .btn-form :hover {
   background-color: #66d9ff;
 }
