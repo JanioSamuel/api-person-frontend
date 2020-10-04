@@ -34,7 +34,7 @@ export default function Navbar() {
         <Link to="/form" style={{ textDecoration: 'none' }}>
           <label>REGISTER PERSON</label>
         </Link>
-        <a href="http://localhost:8090/swagger-ui.html" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a href='https://api-person-backend.herokuapp.com/swagger-ui.html' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <label>DOCS</label>
         </a>
         <a href="https://github.com/JanioSamuel/api-person-backend" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
