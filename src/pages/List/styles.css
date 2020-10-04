@@ -1,0 +1,35 @@
+table {
+  margin-top: 20px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+td {
+  padding: 8px 40px;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr td img {
+  width: 16px;
+  height: 16px;
+}
+.btn-new {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  width: 200px;
+  height: 42px;
+  border: none;
+  background-color: #33ccff;
+  cursor: pointer;
+}

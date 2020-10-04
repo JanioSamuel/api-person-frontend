@@ -1,0 +1,39 @@
+.form-login {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login input {
+  width: 70%;
+  height: 32px;
+  border-bottom: 1px #ddd solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.login-label {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.btn {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  width: 200px;
+  height: 42px;
+  border: none;
+  background-color: #33ccff;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background-color: #66d9ff;
+}
