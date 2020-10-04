@@ -41,7 +41,7 @@ export default function Login({ history }) {
             value={password}
             onChange={event => setPassword(event.target.value)}
           />
-          <button className="btn" type="submit">Sigin</button>
+          <button className="btn" type="submit">Login</button>
         </form>
       </div>
     </>
