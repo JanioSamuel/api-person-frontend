@@ -21,8 +21,8 @@ tr:nth-child(even) {
 }
 
 tr td img {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 .list-container {
@@ -37,4 +37,19 @@ tr td img {
 .people-list-label {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 32px;
+}
+
+.btn-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-options img {
+  margin-right: 15px;
+}
+
+.delete-option {
+  width: 18px;
+  height: 24px;
 }

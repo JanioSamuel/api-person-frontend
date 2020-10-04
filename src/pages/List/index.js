@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import api from '../../services/api';
 import editImage from '../../assets/edit.png';
+import deleteImage from '../../assets/delete.png';
 
 import './styles.css';
 import Navbar from '../../components/Navbar';
@@ -35,6 +36,23 @@ export default function List({ history }) {
       state: e
     })
   }
+
+  async function handleDelete(id) {
+    const auth = localStorage.getItem('auth');
+    try {
+      await api.delete(`/person/${id}`, {
+        headers: {
+          Authorization: "Basic " + auth
+        }
+      });
+      alert('Successfully deleted');
+      window.location.reload();
+    } catch (err) {
+      if (err.response.status === 401) {
+        history.push("/unauthorized");
+      }
+    }
+  }
   return (
     <>
       <Navbar />
@@ -62,7 +80,12 @@ export default function List({ history }) {
                 <td>{person.placeBirth}</td>
                 <td>{person.citizenship}</td>
                 <td>{person.taxpayerId}</td>
-                <td><img src={editImage} alt="edit" title="edit" onClick={() => handleEdit(person)} /></td>
+                <td>
+                  <div className="btn-options">
+                    <img src={editImage} alt="edit" title="edit" onClick={() => handleEdit(person)} />
+                    <img src={deleteImage} alt="delete" title="delete" className="delete-option" onClick={() => handleDelete(person.id)} />
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>
