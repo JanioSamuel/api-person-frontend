@@ -61,7 +61,7 @@ export default function Form({ history }) {
         params.createdAt = createdAt;
         await api.put('/person', params, headers);
         alert('Successfully updated');
-        window.location.reload();
+        history.push("/list");
       } catch (err) {
         const keys = err.response.data;
         alert(Object.keys(keys).map(key => `* ${keys[key]} \n `));
